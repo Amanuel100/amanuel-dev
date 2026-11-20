@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "slug": "fxdiary",
+    "title": "FxDiary",
+    "category": "AI-Powered Trading Journal",
+    "year": 2025,
+    "description": "A smart trading journal that learns from trades, pinpoints mistakes, and coaches traders with real-time performance analytics.",
+    "thumbnail": "/textures/fxdiary.jpg",
+    "accentColor": "#0ea5e9",
+    "tech": [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "AI Analytics",
+      "Node.js"
+    ],
+    "liveUrl": "https://fxdiary.com.et/",
+    "repoUrl": "https://github.com/Amanuel100/fxdiary"
+  },
+  {
+    "id": 2,
+    "slug": "heto-school",
+    "title": "Heto High School",
+    "category": "Educational Institution Platform",
+    "year": 2025,
+    "description": "A modern, responsive web platform for Heto High School, showcasing academic programs, announcements, and school community.",
+    "thumbnail": "/textures/heto-school.png",
+    "accentColor": "#2563eb",
+    "tech": [
+      "React",
+      "Tailwind CSS",
+      "JavaScript",
+      "Responsive Web"
+    ],
+    "liveUrl": "https://heto.netlify.app/",
+    "repoUrl": ""
+  },
+  {
+    "id": 3,
+    "slug": "aman-image-generator",
+    "title": "Aman Image Generator AI",
+    "category": "AI Generative Art Suite",
+    "year": 2025,
+    "description": "Transforming natural language prompts into stunning AI-powered visuals, powered by Pollinations.ai and Google Gemini integration.",
+    "thumbnail": "/textures/aman-image-generator.png",
+    "accentColor": "#8b5cf6",
+    "tech": [
+      "React",
+      "Google Gemini API",
+      "Pollinations.ai",
+      "Tailwind CSS"
+    ],
+    "liveUrl": "https://aman-image-generator.netlify.app/",
+    "repoUrl": "https://github.com/Amanuel100/aman-image-generator"
+  },
+  {
+    "id": 4,
+    "slug": "netflix-clone",
+    "title": "Netflix Replica",
+    "category": "Entertainment Streaming UI",
+    "year": 2024,
+    "description": "A high-fidelity Netflix streaming interface replica featuring dynamic video hero banners, categorized movie carousels, and responsive previews.",
+    "thumbnail": "/textures/netflix-clone.jpg",
+    "accentColor": "#e50914",
+    "tech": [
+      "React",
+      "TMDB API",
+      "Tailwind CSS",
+      "Framer Motion"
+    ],
+    "liveUrl": "",
+    "repoUrl": "https://github.com/Amanuel100/netflix"
+  },
+  {
+    "id": 5,
+    "slug": "apple-replica",
+    "title": "Apple Replica",
+    "category": "Interactive Product Experience",
+    "year": 2024,
+    "description": "A sleek interactive replica of Apple’s iPhone 14 Pro flagship experience, featuring fluid 3D product perspectives and refined scroll motion.",
+    "thumbnail": "/textures/apple-replica.jpg",
+    "accentColor": "#a855f7",
+    "tech": [
+      "React",
+      "GSAP",
+      "CSS3 Transitions",
+      "Responsive Design"
+    ],
+    "liveUrl": "",
+    "repoUrl": "https://github.com/Amanuel100/Apple-React"
+  }
+]

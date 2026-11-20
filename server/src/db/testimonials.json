@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "quote": "Amanuel has that rare ability to make a technically complex product feel effortless. Every interaction had a reason to exist.",
+    "name": "Hana Tesfaye",
+    "role": "Co-founder",
+    "company": "Nile Labs",
+    "avatar": "/textures/avatar-1.svg"
+  },
+  {
+    "id": 2,
+    "quote": "The attention to performance was just as strong as the visual craft. We felt involved and informed at every stage.",
+    "name": "Daniel Mekonnen",
+    "role": "CTO",
+    "company": "Habesha Digital",
+    "avatar": "/textures/avatar-2.svg"
+  },
+  {
+    "id": 3,
+    "quote": "He translated our loose creative direction into a distinctive experience. The motion gave our story a whole new dimension.",
+    "name": "Sofia Andersson",
+    "role": "Founder",
+    "company": "Kinetik Studio",
+    "avatar": "/textures/avatar-3.svg"
+  },
+  {
+    "id": 4,
+    "quote": "Thoughtful questions, clean implementation, and a beautifully considered result. A collaborator who cares about the small things.",
+    "name": "Yonas Bekele",
+    "role": "Product Lead",
+    "company": "Zema Collective",
+    "avatar": "/textures/avatar-4.svg"
+  },
+  {
+    "id": 5,
+    "quote": "From the first prototype to the final handoff, Amanuel brought clarity and care. Our interface finally felt as human as our mission.",
+    "name": "Maya Chen",
+    "role": "Co-founder",
+    "company": "Bloom Systems",
+    "avatar": "/textures/avatar-5.svg"
+  }
+]

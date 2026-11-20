@@ -1,0 +1,3 @@
+clash: https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&display=swap
+inter: https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap
+Clash Display: Indian Type Foundry / Fontshare. Inter: Rasmus Andersson, SIL Open Font License.

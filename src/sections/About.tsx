@@ -1,0 +1,15 @@
+import { Link } from 'react-router-dom';
+import { useHorizontalScroll } from '@/hooks/useHorizontalScroll';
+import { useTextReveal } from '@/hooks/useTextReveal';
+import RevealImage from '@/components/RevealImage';
+export default function About() {
+  const { section, track, bar } = useHorizontalScroll(); const statement = useTextReveal<HTMLParagraphElement>();
+  return <section className="about-section" id="about-panels" ref={section} aria-label="About Amanuel"><div className="about-track" ref={track}>
+    <article className="about-panel portrait-panel"><p className="eyebrow">01 / THE PERSON BEHIND THE PIXELS</p><RevealImage src="/textures/portrait.jpg" alt="Amanuel Eyob, Creative Web Developer" /><p className="portrait-caption">Amanuel Eyob — Addis Ababa<br /><span className="muted">Creative Web Developer</span></p></article>
+    <article className="about-panel statement-panel"><p className="eyebrow">02 / A LITTLE ABOUT ME</p><p className="about-statement" ref={statement}>{'I turn ideas into interactive stories that live in the browser.'.split(' ').map((word, i) => <span className="statement-word" key={i}>{word} </span>)}</p><p className="muted about-description">A developer with a designer’s eye. I connect thoughtful interfaces with thoughtful engineering, making every interaction feel considered.</p></article>
+    <article className="about-panel"><p className="eyebrow">03 / THE JOURNEY IN NUMBERS</p><div className="stats-grid">{[[3, 'Years', '+'], [15, 'Projects', '+'], [1, 'Client', ''], [0, 'Awards', '']].map(([count, label, suffix]) => <div className="stat-card" key={label} data-cursor="hover"><strong data-count={count} data-suffix={suffix}>{count}{suffix}</strong><span>{label}</span></div>)}</div></article>
+    <article className="about-panel philosophy-panel"><p className="eyebrow">04 / THE PHILOSOPHY</p><blockquote>“Design is not what it looks like.<br /><em>Design is how it moves.</em>”</blockquote><p className="muted">A guiding principle for this portfolio</p></article>
+    <article className="about-panel signature-panel"><p className="eyebrow">05 / MADE WITH INTENTION</p><svg viewBox="0 0 700 190" className="signature" role="img" aria-label="Amanuel Eyob handwritten signature"><path className="signature-path" pathLength="1200" strokeDasharray="1200" d="M30 150Q80 -20 85 100L65 150M45 115L112 95M105 135Q110 75 128 96L127 130Q155 68 159 113Q166 76 180 97L185 130Q198 145 215 110Q233 72 239 98Q226 131 210 130Q235 149 251 103L260 132Q278 145 292 96Q289 135 307 126Q341 106 340 96Q315 89 317 122Q345 152 366 83Q380 10 380 57L361 129Q380 151 398 117M445 72L502 56M445 72L419 151L489 135M437 111L487 94M501 99Q478 153 514 126L536 84Q516 166 489 183Q468 171 523 151M548 90Q518 143 557 127Q582 111 562 91Q537 81 538 118M583 129Q618 28 616 47L584 134Q630 149 636 111Q634 86 600 119M35 169Q309 140 652 161" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" /></svg><Link className="text-link" to="/contact">→ Let’s work together</Link></article>
+  </div><div className="horizontal-progress"><div ref={bar} /></div></section>;
+}
+

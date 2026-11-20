@@ -1,0 +1,25 @@
+import express from 'express';
+import helmet from 'helmet';
+import cors from 'cors';
+import { rateLimit } from 'express-rate-limit';
+import { env } from './config';
+import { pool } from './db/pool';
+import { contactRouter } from './routes/contact';
+import { projectsRouter } from './routes/projects';
+import { testimonialsRouter } from './routes/testimonials';
+import { errorHandler, HttpError } from './middleware/error';
+import { startMailWorker, transport } from './mail/transport';
+export const app = express();
+app.disable('x-powered-by'); app.set('trust proxy', env.TRUST_PROXY);
+app.use(helmet());
+const origins = new Set(env.CORS_ORIGIN.split(',').map((origin) => origin.trim()));
+app.use(cors({ origin(origin, callback) { if (!origin || origins.has(origin)) callback(null, true); else callback(new HttpError(403, 'Origin is not allowed.')); }, methods: ['GET', 'POST'], allowedHeaders: ['Content-Type'] }));
+app.use(express.json({ limit: '16kb' }));
+app.use('/api', rateLimit({ windowMs: 15 * 60 * 1000, limit: 120, standardHeaders: 'draft-7', legacyHeaders: false, message: { message: 'Too many requests. Please try again later.' } }));
+app.get('/api/health', async (_request, response) => { if (!env.DEMO_MODE) await pool.execute('SELECT 1'); response.json({ status: 'ok', mode: env.DEMO_MODE ? 'demo' : 'live' }); });
+app.use('/api/contact', contactRouter); app.use('/api/projects', projectsRouter); app.use('/api/testimonials', testimonialsRouter);
+app.use((_request, response) => { response.status(404).json({ message: 'Endpoint not found.' }); }); app.use(errorHandler);
+const server = app.listen(env.PORT, '0.0.0.0', () => console.log(`Portfolio API listening on http://localhost:${env.PORT} (${env.DEMO_MODE ? 'demo mode: local persistence, no email' : 'MySQL mode'})`));
+const stopWorker = startMailWorker(); let closing = false;
+function shutdown() { if (closing) return; closing = true; stopWorker(); const timeout = setTimeout(() => process.exit(1), 15000); timeout.unref(); server.close(() => { void pool.end().finally(() => { transport.close(); clearTimeout(timeout); process.exit(0); }); }); }
+process.on('SIGTERM', shutdown); process.on('SIGINT', shutdown);
