@@ -28,7 +28,7 @@ export default function Hero() {
       <div className="hero-under"><p className="hero-description">I build immersive, high-performance web experiences with React, Three.js, and a lot of love for motion.</p>
         <div className="hero-actions"><Magnetic><Button to="/work">View Work <span>↗</span></Button></Magnetic><Magnetic><Button to="/contact" variant="secondary">Get in Touch <span>↗</span></Button></Magnetic></div></div>
     </div>
-    <aside className="hero-side"><span className="mono muted">BASED IN</span><p>Addis Ababa, ET<br /><span className="muted">{time} EAT</span></p><div className="social-mini"><a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GH ↗ GitHub platform">GH ↗</a><a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="IN ↗ LinkedIn platform">IN ↗</a></div></aside>
+    <aside className="hero-side"><span className="mono muted">BASED IN</span><p>Addis Ababa, ET<br /><span className="muted">{time} EAT</span></p><div className="social-mini"><a href="https://github.com/Amanuel100" target="_blank" rel="noreferrer" aria-label="GH ↗ GitHub platform">GH ↗</a><a href="https://www.linkedin.com/in/amanuel-eyob-608a93403?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer" aria-label="IN ↗ LinkedIn platform">IN ↗</a></div></aside>
     <div className="hero-meta"><span className="mono muted">INDEPENDENT DEVELOPER & CREATIVE THINKER</span><a className="scroll-indicator" href="#about" aria-label="Scroll to explore about Amanuel"><span className="mouse-outline"><i /></span><span>SCROLL TO EXPLORE</span></a><span className="availability"><span className="status-dot" /> Open for collaborations</span></div>
   </section>;
 }

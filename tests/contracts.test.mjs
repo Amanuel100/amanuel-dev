@@ -2,9 +2,9 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
-test('five projects have local artwork and matching seed slugs', () => {
+test('six projects have local artwork and matching seed slugs', () => {
   const projects = JSON.parse(fs.readFileSync('server/src/db/projects.json','utf8'));
-  assert.equal(projects.length,5); assert.equal(new Set(projects.map(p=>p.slug)).size,5);
+  assert.equal(projects.length,6); assert.equal(new Set(projects.map(p=>p.slug)).size,6);
   for(const p of projects){assert.ok(fs.existsSync(path.join('public',p.thumbnail)));assert.ok(p.tech.length>0);assert.ok(fs.readFileSync('server/db/seed.sql','utf8').includes(p.slug));}
 });
 test('requested SQL copies match',()=>{for(const name of ['schema.sql','seed.sql'])assert.equal(fs.readFileSync(`server/db/${name}`,'utf8'),fs.readFileSync(`server/src/db/${name}`,'utf8'));});

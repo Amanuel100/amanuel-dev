@@ -12,3 +12,5 @@ work/
 outputs/
 *.tsbuildinfo
 .vercel/
+
+.vercel

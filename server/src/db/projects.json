@@ -19,6 +19,25 @@
     "repoUrl": "https://github.com/Amanuel100/fxdiary"
   },
   {
+    "id": 6,
+    "slug": "moon-computer",
+    "title": "Moon Computer",
+    "category": "Computer Storefront & Dashboard",
+    "year": 2026,
+    "description": "A modern computer storefront with an immersive 3D home page, product catalog, Telegram inquiries, and an owner dashboard for managing the catalogue.",
+    "thumbnail": "/textures/moon.png",
+    "accentColor": "#38bdf8",
+    "tech": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Express",
+      "PostgreSQL"
+    ],
+    "liveUrl": "https://moon-computer-gamma.vercel.app/",
+    "repoUrl": "https://github.com/Amanuel100/moon-computer"
+  },
+  {
     "id": 2,
     "slug": "heto-school",
     "title": "Heto High School",
